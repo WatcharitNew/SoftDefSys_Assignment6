@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  frontend:
+    build: './the_memories_frontend'
+    environment:
+      API: 'backend'
+    ports:
+      - '3000:3000'
+    stdin_open: true
+  backend:
+    build: './the_memories_backend'
+    environment:
+      HOST: 'db'
+      USER: 'root'
+      PASSWORD: 'password'
+      DATABASE: 'memory'
+    ports:
+      - '10000:10000'
+    restart: always
+  db:
+    image: 'mysql:5.7'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: memory
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./database:/data/application
+      - db-data:/var/lib/mysql
+    restart: always
+volumes:
+  db-data:

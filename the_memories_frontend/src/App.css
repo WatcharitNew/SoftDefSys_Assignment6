@@ -1,0 +1,240 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  background-color: black;
+  flex: 1;
+  color: white;
+}
+
+.topic {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  top: 10%;
+  left: 10%;
+  font-size: 4vw;
+  text-shadow: 0 0 0.8vw black;
+}
+
+.detail {
+  font-size: 1.5vw;
+}
+
+.background-image {
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: 0px 0px;
+}
+
+.questionaire-section {
+  display: flex;
+  height: 100vh;
+  max-width: 100%;
+  background-color: #1b294a;
+  color: #ffc05e;
+  text-shadow: 0 0 0.8vw black;
+  justify-content: center;
+}
+
+.result-section {
+  min-height: 100vh;
+  max-width: 100%;
+  background-color: #ffc05e;
+  color: #1b294a;
+  justify-content: center;
+}
+
+.result-topic {
+  display: flex;
+  font-size: 4vw;
+  font-weight: bold;
+  text-shadow: 3px 3px 2vw rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.result-allmem {
+  text-shadow: 0 0 0.8vw black;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 355px);
+  grid-gap: 20px;
+  grid-auto-rows: 225px;
+  grid-auto-columns: auto;
+}
+
+.questionaire-area {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  height: 400px;
+  background-color: rgb(30, 67, 131);
+  border-radius: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 5%;
+}
+
+.questionaire-label {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 3%;
+  left: 10%;
+  margin-bottom: 3%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+}
+
+.quest-label {
+  font-size: 20px;
+  margin-left: 5%;
+}
+
+.quest-answer {
+  margin-top: 10px;
+  margin-left: 5%;
+  font-size: 20px;
+  margin-bottom: 3%;
+  max-width: 85%;
+  max-height: 120px;
+}
+
+footer {
+  background-color: #1b294a;
+}
+
+a {
+  color: white
+}
+
+.memory-icon {
+  display: flex;
+  width: 30vw;
+  height: auto;
+  justify-self: center;
+  align-self: center; 
+  margin-left: 5%;
+}
+
+.send-icon {
+  display: flex;
+  height: 20px;
+  padding-left: 10px;
+}
+
+.submit {
+  display: flex;
+  text-align: center;
+  width: fit-content;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: #ffc05e;
+  color: #1b294a;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.add-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  align-content: center;
+  margin-top: 50px;
+  width: 9vw;
+  height: auto;
+  border-radius: 10%;
+  border-color: #ffc05e;
+  color: #1b294a;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #ffc05e;
+  box-shadow: 6px 5px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.add-icon {
+  width: 2vw;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.add-label {
+  align-self: center;
+  font-size: 1.2vw;
+}
+
+.result-box {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  height: 200px;
+  width: 200px;
+  background-color: rgb(30, 67, 131);
+  border-radius: 20%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-right: 5%;
+  color: white;
+}
+
+.result-memory {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.result-id {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffc05e;
+  margin-left: -20px;
+}
+
+.result-username {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+}
+
+.text-yellow {
+  color: #ffc05e;
+  margin-right: 10px;
+}
+
+@media (max-width : 1000px) {
+  .all-form {
+    width: 80%;
+  }
+
+  .memory-icon {
+    display: none !important;
+  }
+
+  .questionaire-area {
+    width: 80% !important;
+  }
+}
